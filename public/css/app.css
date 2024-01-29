@@ -1,0 +1,321 @@
+@media screen {
+	html,
+	body {
+		margin:0;
+		padding:0;
+		font-family: "Microsoft YaHei", sans-serif;
+	}
+	
+	#todo {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	header {
+		background: #181c1c;
+		height: 48px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+
+  		justify-content: flex-start;
+
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+	header .derecha{
+		margin-left: auto;
+	}
+	
+	
+	header .logo {
+		padding-top: 4px;
+		-webkit-filter: drop-shadow(0px 0px 10px white);
+		filter: drop-shadow(0px 0px 10px white);
+	}
+	header .logo a img{
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-right: 15px;
+	}
+
+	header .enlace a{
+		color:white;
+		text-decoration: none;
+		margin-left: 10px;
+		padding-left: 13px;
+		padding-right: 13px;
+	}
+	header .derecha a{
+		color:white;
+		text-decoration: none;
+		margin-left: 10px;
+		padding-left: 13px;
+		padding-right: 13px;
+	}
+	
+	header .titulo{
+		padding-left: 5px;
+	}
+
+	.barralogin{
+		/*width: 100%;*/
+		border-left: thin black solid;
+		border-right: thin black solid;
+		background:#ededed;
+		
+	}
+
+	header .titulo a, 
+	header .titulo a:hover, 
+	header .titulo a:visited{
+		text-decoration:none;	
+		color:#676767;
+	}
+	header .enlace a:hover,header .derecha a:hover{
+		color: #ff7323;
+	}
+	
+	footer {
+		color: #7e7b6d;
+		background: #17181e;
+		height: 48px;
+		display: flex;
+		align-items: center;
+		/*justify-content: space-between;*/
+		justify-content: center;
+  		align-items: center;
+	}
+	
+	footer h2 {
+		color:white;
+		font-family:"Arial Rounded MT Bold";
+	}
+	
+	.contenido{
+		display: flex;
+		flex-direction:row;
+		flex-wrap: no-wrap;
+		margin-top: 48px;
+		color: white;
+	}
+	.contenido h1{
+		text-align: center;
+	}
+	
+	/* nav {
+		background: #e1dfff;   
+	    margin:5px; 
+	    max-width: 200px; 
+	    flex: 1 1 20%;
+	} */
+	
+	article {
+		margin: 5px;
+		flex: 1 1 80%;
+	}
+	
+	nav > ul {	
+		list-style-type:none;
+		margin:0;
+		padding:0;
+		margin-bottom:0.2em;
+		display:flex;
+		flex-direction: column;
+	}
+	
+	nav ul li {
+		flex: 1 1;
+		text-decoration: none;
+		list-style-type: none;
+		
+	}
+	
+	nav li a {	
+		display: block;
+		text-decoration:none;
+	    color: #999999;
+	    text-align:center;
+	    line-height:40px;    
+	
+	}
+	
+	nav li a:hover {
+		text-decoration: none;
+	    color: #fff;
+	    background: rgba(255,255,255,0.2);
+	}
+	
+	nav li a:active, nav li a:focus, nav li a:visited {
+		text-decoration:none;
+	}
+	*/
+	
+	p {
+		margin:0px;
+		padding:0px;
+	}
+	
+	.error{
+		border: red thin solid;
+		background-color:#ffb1c7;
+		color: red;
+		display: inline;
+	}
+	
+	article div.par{
+		background-color: #52e0cb;
+		color:black;
+	} 
+	 
+	article div.impar{
+		background-color: blue;
+		color:white;
+	} 
+	
+	
+	.pager{
+		background-color: white;
+		color:black;
+	}
+	
+	.pager .izq{
+		float: left;
+		/*width: 40%;*/
+		padding-left: 5px;
+		color: green; 
+	}
+	
+	.pager .der{
+		float: right;
+		/*width: 58%;*/
+		text-align: right;
+		padding-right: 5px;
+	}
+	
+	.pager .der a{
+		text-decoration: none;
+		color:green;
+	}
+	.pager .der a:hover{
+		text-decoration: none;
+		color:red;
+	}
+	
+	.pager .final{
+		clear: both;
+	}
+	
+	/*definiciones de tabla para
+	 * el objeto CGrid con el estilo
+	 * por defecto clase tabla
+	 */
+	
+	div.tabla{
+        width: 100%;
+		overflow: auto;
+	}
+	div.tabla table.tabla{
+		background-color: #b6c7cd;
+		border-collapse: collapse;
+	}
+	
+	div.tabla table.tabla th{
+		background-color: blue;
+		color:white;
+	}
+	
+	div.tabla table.tabla tr.par{
+		background-color: #edd8d8;
+		color:black;
+	}
+	div.tabla table.tabla tr.impar{
+		background-color: #f8f0d6;
+		color:black;
+	}
+	
+	div.tabla table.tabla tr td{
+		padding: 2px;
+	}
+	
+	/*
+	 * Definiciones de tabla para
+	 * el objeto CGrid con estilo 
+	 * propio
+	 */
+	table.tabla1{
+		background-color: #b6c7cd;
+		border-collapse: collapse;
+	}
+	
+	table.tabla1 th{
+		background-color: blue;
+		color:white;
+	}
+	
+	table.tabla1 tr.par{
+		background-color: #edd8d8;
+		color:black;
+	}
+	table.tabla1 tr.impar{
+		background-color: #f8f0d6;
+		color:black;
+	}
+	
+	table.tabla1 tr td{
+		padding: 2px;
+	}
+	
+
+	/*
+	 * Definiciones de estilo para
+	 * el objeto CCaja con estilo 
+	 * propio
+	 */
+
+	.caja
+	{
+		background-color: #ef9b17;
+		color: #118ef8;
+	}
+	.caja .titulo
+	{
+		border: thin red solid;
+		padding: 3px;
+	}
+	.caja .cuerpo
+	{
+		border: thin red solid;
+		padding: 3px;
+		background-color: #ffe3ae;
+	}
+}
+
+@media screen and (max-width:400px){
+	.contenido{
+		flex-direction:column;
+	}
+	
+	nav {
+		max-width: 100%;
+	}
+}
+
+/* Para que la web ocupe toda la pantalla hay que ponerle el 100% del alto menos los 96px que ocupan la barra superior e inferior */
+html,body,article{
+	min-height:calc(100vh - 96px);
+	padding: 0;
+	margin:0;
+}
+
+.nombreUsuario{
+	margin-left: auto;
+	color:white;
+	font-family: "Microsoft YaHei", sans-serif;
+}
+main {
+	width: 100%;
+}

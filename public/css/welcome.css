@@ -1,0 +1,145 @@
+/* .correo{
+    border: 1px solid white;
+    background-color: black;
+    padding: 15px;
+    color: white;
+    border-radius: 5px;
+    text-align: left;
+    font-weight: bolder;
+} */
+.primerTexto{
+    font-size: 46px;
+    font-weight: bold;
+}
+.divForm {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.inputCorreo{
+    width: 50%;
+}
+/* .botonCorreo{
+    margin-top: 25px;
+} */
+.imagenes{
+    width: 92%;
+    margin-top: auto;
+}
+
+
+#containerMarquesina {
+    width: 100%;
+    overflow: hidden;
+    display:flex;
+    flex-direction: row;
+    padding: 4px 0px;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    white-space: nowrap;
+    animation: slide 40s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.slider label {
+    display: inline-block;
+    padding: 10px;
+    width: 300px;
+}
+
+.slider:hover {
+    animation-play-state: paused;
+}
+.pausado {
+    animation-play-state: paused;
+}
+@keyframes cambioColor {
+    0% { background-color: #ff8901; }
+    50% { background-color: #d449f3; }
+    100% { background-color: #ff8901; }
+}
+#containerMarquesina {
+    background-image: linear-gradient(to right, #ff8901, #d449f3);
+}
+.slider label{
+    font-weight: bold;
+}
+
+.basket{
+    min-width: 310px;
+    width: 16.145833333vw;
+    background-color: #151515;
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: max(20px,1.041666667vw);
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: max(20px,1.041666667vw);
+    min-height: 325px;
+    height: 36.434977578vh;
+    position: relative;
+    background: #151515;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.top{
+    background-color: #242424;
+    padding: 2% 3% 2% 3%;
+    display: inline-block;
+    border-bottom-right-radius: 12px;
+}
+.coinMix, desc{
+    padding-left: 5%;
+}
+.desc{
+    margin-top: 4%;
+}
+.bottom{
+    padding-right: 5%;
+    padding-left: 0%;
+    padding-bottom: 2%;
+}
+
+.coinButtonSection{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #ef724b;
+}
+.boton{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #ef724b;
+    border-radius: 4px;
+}
+#contenidoAbajo{
+    overflow: auto;
+    background-color: white;
+    /* border: 1px solid black; */
+    border-radius: 10px 10px;
+    margin-top: -10px;
+    padding-top: 13px;
+    padding-left: 13px;
+    padding-right: 13px;
+}

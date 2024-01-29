@@ -1,0 +1,562 @@
+.containerNegro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 0 4%;
+}
+
+.textoInfo {
+    flex-basis: 70%;
+    text-align: left;
+}
+
+.image {
+    flex-basis: 30%;
+    text-align: right;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+.debajo{
+    background-color: #f5f7fa;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 85%;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    margin-top: 2vw;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.buscador {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group-addon {
+    background-color: white;
+    border: none;
+    padding: 6px 10px;
+}
+
+.form-control {
+    border: none;
+    padding: 5px;
+    margin-left: -5px;
+    font-size: 16px;
+    color: black;
+    background-color: #f5f5f5;
+    border-radius: 0;
+}
+.titulos {
+    width: 85%;
+    display: flex;
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+.titulos label{
+    color: #86898f;
+}
+
+.label1 {
+    width: 15%;
+}
+
+.label2 {
+    width: 27.5%;
+}
+
+.label3 {
+    width: 57.5%;
+}
+
+.rentabilidadMoneda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 85%;
+}
+
+.item {
+    height: 100%;
+}
+
+.item-1 {
+    padding-left: 15px;
+    flex-basis: 15%;
+    background-color: white;
+    color: black;
+}
+
+.item-2 {
+    flex-basis: 27.5%;
+    background-color: white;
+    color: black;
+}
+
+.item-3 {
+    flex-basis: 42.5%;
+    background-color: white;
+    color: black;
+}
+
+.item-4 {
+    flex-basis: 15%;
+    background-color: white;
+    color: black;
+}
+.divMoneda {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    color: black;
+}
+
+.logoMoneda {
+    flex: 0 0 33.33%; /* Ocupa el 33.33% del ancho total */
+}
+
+.logoMoneda img {
+    height: 100%; /* La imagen ocupa todo el alto del contenedor */
+}
+
+.text {
+    flex: 0 0 66.66%; /* Ocupa el 66.66% del ancho total */
+    /*padding-left: 20px; /* Margen izquierdo para separar la imagen */
+}
+
+.text h2, .text p {
+    margin: 0; /* Quita los márgenes por defecto */
+}
+
+.item-3 button:not(:first-child) {
+    margin-left: 1.5vw;
+}
+.abreviaturaMoneda{
+    box-sizing: border-box;
+    margin: 0px 8px 0px 12px;
+    min-width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(30, 35, 41);
+    /* font-family: BinancePlex,Arial,sans-serif!important; */
+    text-size-adjust: 100%;
+}
+
+#capa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo grisáceo */
+    z-index: 999; /* Capa por encima del resto de elementos */
+    display: none; /* Ocultar por defecto */
+}
+
+#ventana {
+    /* width: 375px; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 1000; /* Capa por encima de la capa gris */
+    display: none; /* Ocultar por defecto */
+    border-radius: 8px;
+    height: 80%;
+    overflow: auto;
+}
+
+#ventana p {
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+/* para indicar las monedas y los precios */
+.contenedorMonedas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-elements {
+    display: flex;
+}
+
+.right-element {
+    margin-left: auto;
+}
+
+#cerrar-ventana {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color:grey;
+    z-index: 99;
+}
+
+
+/* añadido para el cuadrado emergente */
+
+html{
+    text-size-adjust: 100%;
+}
+.cabecera{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid lightgrey;
+    padding: 18px 5%;
+}
+.panelIzquierda{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+    flex: 1;
+}
+.suscribirse{
+    font-size: 20px;
+    box-sizing: border-box;
+    margin: 0px 8px 0px 0px;
+    min-width: 0px;
+    font-weight: 500;
+    line-height: 28px;
+}
+.suscribirseMoneda{
+    font-size: 20px;
+    box-sizing: border-box;
+    margin: 0px 0px 0px 8px;
+    min-width: 0px;
+    font-weight: 500;
+    line-height: 28px;
+}
+.duracion{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin-top: 15px;
+    padding: 20px 0;
+    min-width: 0px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(30, 35, 41);
+    width: 100%
+}
+.panelBotones{
+    box-sizing: border-box;
+    margin: 0px 20px;
+    min-width: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    line-height: 20px;
+}
+.panelBotones button{
+    margin: 5px 12px 0px 0px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: relative;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 36px;
+    min-width: 64px;
+    cursor: pointer;
+}
+.importe{
+    width: 90%;
+    font-size: 14px;
+    line-height: 20px;
+    box-sizing: border-box;
+    margin: 15px 5% 15px 5%;
+    min-width: 0px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.debajoIndex{
+    font-size: 14px;
+    line-height: 20px;
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.debajoIndex a {
+    margin-left: auto;
+}
+.limites{
+    width: 90%;
+    font-size: 14px;
+    line-height: 20px;
+    box-sizing: border-box;
+    margin: 0px 5% 15px 5%;
+    min-width: 0px;
+    display: flex;
+    flex-direction: column;
+}
+.suficiente{
+    display: none;
+}
+.automatico{
+    box-sizing: border-box;
+    min-width: 0px;
+    display: flex;
+    margin: 16px 20px;
+    background-color: rgb(250, 250, 250);
+    position: relative;
+    align-items: center;
+    padding: 24px 16px;
+    border-radius: 8px;
+}
+.automatico input{
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    width: 40px;
+    height: 24px;
+    min-width: 40px;
+}
+.textoAutomatico{
+    box-sizing: border-box;
+    margin: 5px 0px 0px;
+    min-width: 0px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(112, 122, 138);
+}
+.panelCompleto{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    min-width: 300px;
+}
+.resumen{
+    box-sizing: border-box;
+    min-width: 0px;
+    display: flex;
+    color: rgb(3    0, 35, 41);
+    font-size: 16px;
+    font-weight: 400;
+    top: 0px;
+    background-color: rgb(250, 250, 250);
+    padding: 5% 5% 3%;
+    z-index: 1;
+    align-items: center;
+}
+.fechas{
+    background-color: rgb(249, 249, 249);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fecha{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    background-color: rgb(249, 249, 249);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.textoFecha{
+    margin-left: auto;
+}
+.estimado{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    background-color: rgb(249, 249, 249);
+}
+.panelDerecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    flex: 1;
+    background-color: rgb(249, 249, 249);
+}
+.panelDerecha .botonConfirmar:last-child {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+hr{
+    /* width: 90%; */
+    margin: auto;
+}
+.linea{
+    background-color: rgb(249, 249, 249);
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 4%;
+}
+.linea2{
+    text-align: center;
+}
+.panelIzquierda div h3{
+    font-size: 20px;
+    min-width: 0px;
+    font-weight: 500;
+    line-height: 28px;
+}
+.panelIzquierda div div h3{
+    font-size: 20px;
+    min-width: 0px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.panelCompleto{
+    max-width: 950px;
+    color: black;
+}
+#ventana{
+    max-height: 620px;
+}
+
+@media (max-width: 850px) {
+    .panelCompleto{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    .panelIzquierda{
+        height: 620px;
+        /* solución peligrosa
+        overflow-y: hidden; */
+    }
+    .panelDerecha{
+        height: auto;
+    }
+    #ventana{
+        max-height: 100vh;
+        width: 100%;
+        min-width: 400px;
+        height: 90%;
+    }
+    .panelDerecha .botonConfirmar:last-child {
+        margin-top: 5%;
+        width: 90%;
+        text-align: center;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+@media screen and (min-width: 851px) and (max-width: 1200px) {
+    #ventana {
+        width: 85%;
+        max-width: 950px;
+    }
+    .panelCompleto{
+        width: 100%;
+        flex-direction: row;
+    }
+    .panelDerecha{
+        height: 100%;
+        overflow: scroll;
+    }
+    .panelIzquierda{
+        height: 100%;
+        overflow: scroll;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1499px) {
+    #ventana {
+        width: 950px;
+        /* max-width: 800px; */
+        max-width: 950px;
+    }
+    .panelDerecha{
+        height: 100%;
+        overflow: scroll;
+    }
+    .panelIzquierda{
+        height: 100%;
+        overflow: scroll;
+    }
+    /* .panelCompleto{
+        width: 100%;
+        flex-direction: row;
+        height: 100%;
+    } */
+}
+
+
+@media (min-width: 1500px) {
+    #ventana{
+        width: 950px;
+        max-width: 950px;
+    }
+    .panelDerecha{
+        height: 100%;
+        overflow: scroll;
+    }
+    .panelIzquierda{
+        height: 100%;
+        overflow: scroll;
+    }
+}
+
+.calculadora{
+    background-color: #f5f7fa;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.contenidoCalculadora{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-top: 2%;
+}

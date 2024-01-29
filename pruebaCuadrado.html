@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html{
+            text-size-adjust: 100%;
+        }
+        .cabecera{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            border-bottom: 1px solid lightgrey;
+            padding: 18px 5%;
+        }
+        .panelIzquierda{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            overflow-y: auto;
+        }
+        .suscribirse{
+            font-size: 20px;
+            box-sizing: border-box;
+            margin: 0px 8px 0px 0px;
+            min-width: 0px;
+            font-weight: 500;
+            line-height: 28px;
+        }
+        .suscribirseMoneda{
+            font-size: 20px;
+            box-sizing: border-box;
+            margin: 0px 0px 0px 8px;
+            min-width: 0px;
+            font-weight: 500;
+            line-height: 28px;
+        }
+        .duracion{
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+            margin-top: 15px;
+            padding: 20px 0;
+            min-width: 0px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: rgb(30, 35, 41);
+            width: 100%
+        }
+        .panelBotones{
+            box-sizing: border-box;
+            margin: 0px 20px;
+            min-width: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .panelBotones button{
+            margin: 5px 12px 0px 0px;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            position: relative;
+            border-radius: 4px;
+            box-sizing: border-box;
+            height: 36px;
+            min-width: 64px;
+            cursor: pointer;
+        }
+        .importe{
+            width: 90%;
+            font-size: 14px;
+            line-height: 20px;
+            box-sizing: border-box;
+            margin: 15px 5% 15px 5%;
+            min-width: 0px;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+        }
+        .debajoIndex{
+            font-size: 14px;
+            line-height: 20px;
+            box-sizing: border-box;
+            margin: 0px;
+            min-width: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .debajoIndex a {
+            margin-left: auto;
+        }
+        .limites{
+            width: 90%;
+            font-size: 14px;
+            line-height: 20px;
+            box-sizing: border-box;
+            margin: 0px 5% 15px 5%;
+            min-width: 0px;
+            display: flex;
+            flex-direction: column;
+        }
+        .suficiente{
+            display: none;
+        }
+        .automatico{
+            box-sizing: border-box;
+            min-width: 0px;
+            display: flex;
+            margin: 16px 20px;
+            background-color: rgb(250, 250, 250);
+            position: relative;
+            align-items: center;
+            padding: 24px 16px;
+            border-radius: 8px;
+        }
+        .automatico input{
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 0px;
+            padding: 0px;
+            width: 40px;
+            height: 24px;
+            min-width: 40px;
+        }
+        .textoAutomatico{
+            box-sizing: border-box;
+            margin: 5px 0px 0px;
+            min-width: 0px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: rgb(112, 122, 138);
+        }
+        .panelCompleto{
+            display: flex;
+            flex-direction: row;
+            height: 95vh;
+            min-width: 300px;
+        }
+        .panelIzquierda, .panelDerecha {
+            flex: 1;
+        }
+        .resumen{
+            box-sizing: border-box;
+            min-width: 0px;
+            display: flex;
+            color: rgb(3    0, 35, 41);
+            font-size: 16px;
+            font-weight: 400;
+            top: 0px;
+            background-color: rgb(250, 250, 250);
+            padding: 5% 5% 3%;
+            z-index: 1;
+            align-items: center;
+        }
+        .fechas{
+            background-color: rgb(249, 249, 249);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .fecha{
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-bottom: 5%;
+            background-color: rgb(249, 249, 249);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .textoFecha{
+            margin-left: auto;
+        }
+        .estimado{
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-bottom: 5%;
+            background-color: rgb(249, 249, 249);
+        }
+        .panelDerecha{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-y: auto;
+        }
+        .panelDerecha .botonConfirmar:last-child {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 5%;
+        }
+        hr{
+            /* width: 90%; */
+            margin: auto;
+        }
+        .linea{
+            background-color: rgb(249, 249, 249);
+            text-align: center;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-bottom: 4%;
+        }
+        .panelDerecha{
+            background-color: rgb(249, 249, 249);
+        }
+        .linea2{
+            text-align: center;
+        }
+        .panelIzquierda div h3{
+            font-size: 20px;
+            min-width: 0px;
+            font-weight: 500;
+            line-height: 28px;
+        }
+        .panelIzquierda div div h3{
+            font-size: 20px;
+            min-width: 0px;
+            font-weight: 500;
+            line-height: 28px;
+        }
+
+        .panelCompleto{
+            max-width: 950px;
+            max-height: 550px;
+        }
+
+        @media (max-width: 800px) {
+            .panelCompleto{
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                width: 100%;
+                max-height: 1100px;
+            }
+            .panelIzquierda{
+                height: auto;
+            }
+            .panelDerecha{
+                height: auto;
+            }
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="panelCompleto">
+        <div class="panelIzquierda">
+            <div class="cabecera">
+                <label class="suscribirse">Earn</label>
+                <!-- <img alt="logo" id="logoMonedaEarn" src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" width="28px">
+                <label id="abreviaturaMonedaEarn" class="suscribirseMoneda">TUSD</label> -->
+            </div>
+            <div style="padding-left: 24px;padding-right: 24px;width:100%;">
+                <div class="duracion" style="display: flex; justify-content: space-between;align-items: center;background-color: #f9f9f9;background-clip: padding-box;width:100%;padding-left: 24px;padding-right: 24px;">
+                    <div style="display: flex;flex-direction: row;text-align:center;">
+                        <div style="height: 35px;width:35px;margin:auto;">
+                            <img alt="logo" id="logoMonedaEarn" src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" width="100%" height="100%">
+                        </div>
+                        <div style="margin-left: 8px;text-align: left;">
+                            <label id="abreviaturaMonedaEarn">bitcoin</label>
+                            <h3>BTC</h3>
+                        </div>
+                        
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center;text-align:center;">
+                        <label>APR aproximado</label>
+                        <h3>69%</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: flex-end;text-align:right;">
+                        <label>Duración</label>
+                        <h3>7 días</h3>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- <div class="panelBotones">
+                <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded">60</button>
+                <button class="bg-white border-2 border-amber-500 text-gray-800 font-medium py-2 px-4 rounded">90</button>
+            </div> -->
+            <div class="importe">
+                <label>Importe de la suscripción</label>
+                <input type="text" id="cantidadSuscribir">
+                <div class="debajoIndex">
+                    <label>1 UDT</label>
+                    <label>Disponible</label>
+                    <a href="">compra</a>
+                </div>
+            </div>
+            <div id="suficiente" class="suficiente">
+                <label>No tienes suficientes criptomonedas?</label>
+                <a href="">Compra aquí</a>
+            </div>
+            <div class="limites">
+                <label style="margin-bottom: 5px;">
+                    Límites de importe
+                </label>
+                <div style="display:flex;flex-direction: row;justify-content: space-between;align-items: center; margin-bottom: 5px;">
+                    <label>Mínimo: </label>
+                    <label style="margin-left: auto;">--</label>
+                </div>
+                <div style="display:flex;flex-direction: row;justify-content: space-between;align-items: center;margin-bottom: 5px;">
+                    <label>Cuota máxima por usuario: </label>
+                    <label style="margin-left: auto;">--</label>
+                </div>
+                <div class="linea2">
+                    <hr>
+                </div>
+                <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;margin-bottom: 5px;">
+                    <label>APR estimado: </label>
+                    <label style="margin-left: auto;" class="text-amber-500 font-semibold text-lg">6.05%</label>
+                </div>
+            </div>
+            <div class="automatico">
+                <input type="checkbox" name="" id="">
+                <div style="display: flex; flex-direction:column;">
+                    <label>Suscripción automática</label>
+                    <label class="textoAutomatico">Habilita la suscripción automática para volver a suscribir un producto que haya caducado con las condiciones anteriores, de forma automática y de inmediato.</label>
+                </div>
+            </div>
+        </div>
+            <div class="panelDerecha">
+                <div class="resumen">
+                    <h3 class="text-xl">Resumen</h3>
+                </div>
+                <div class="fechas">
+                    <div class="fecha">
+                        <label style="color: #828a9a">Fecha de suscripción</label>
+                        <label class="textoFecha">-</label>
+                    </div>
+                    <div class="fecha">
+                        <label style="color: #828a9a" class="text-neutral-500">Fecha valor</label>
+                        <label class="textoFecha">-</label>
+                    </div>
+                    <div class="fecha">
+                        <label style="color: #828a9a" class="text-neutral-500">Fecha de final del interés</label>
+                        <label class="textoFecha">-</label>
+                    </div>
+                    <div class="fecha">
+                        <label style="color: #828a9a" class="text-neutral-500">Próxima fecha de suscripción</label>
+                        <label class="textoFecha">-</label>
+                    </div>
+                </div>
+                <div class="linea">
+                    <hr>
+                </div>
+                <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;" class="estimado">
+                    <label>Interés estimado: </label>
+                    <label style="margin-left: auto;" class="text-amber-500 font-semibold text-lg">--</label>
+                </div>
+                <div class="botonConfirmar">
+                    <button class="bg-amber-500 hover:bg-amber-400 text-white font-bold py-2 px-4 rounded" style="width: 80%;" id="botonConfirmar">Confirmar</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    <script>
+        let objeto = {
+            "id": 3,
+            "currency": "btc",
+            "APR": "3.1000",
+            "duracion": "90",
+            "cantidad_disponible": "100.00000000",
+            "disponible": 1,
+            "created_at": null,
+            "updated_at": null
+        }
+    </script>
+</body>
+</html>

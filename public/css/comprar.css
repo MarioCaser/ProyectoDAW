@@ -1,0 +1,405 @@
+body{
+    font-family: "Microsoft Yahei", sans-serif;
+    background-color: #f7f8fb;
+}
+.crypto-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    /*padding: 10px;*/
+    border-radius: 10px;
+    height: 90%;
+    padding: 0;
+    margin:0;
+}
+
+.crypto-container img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.select-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.select-container ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #fff;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+    display: none;
+    max-height: 300px;
+    overflow-y: auto;
+    position: relative;
+    z-index: 999;
+}
+
+.select-container ul li {
+    position: relative;
+    z-index: 999;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 2%;
+    cursor: pointer;
+}
+
+.select-container ul li img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.select-container ul li:hover {
+    background-color: #f4f4f4;
+}
+
+.select-container.active ul {
+    display: block;
+}
+
+.search-container {
+    width: 97%;
+}
+
+#buscador {
+    width: 90%;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: #ebebeb;
+    border-radius: 4px;
+}
+.orderType label{
+    color: #979797;
+    font-size: 1.25em;
+}
+.orderType label:hover{
+    color: black;
+    cursor: pointer;
+    font-size: 1.25em;
+}
+
+.pagar {
+    display: flex;
+    justify-content: left;
+    padding-left: 3%;
+    align-items: center;
+    position: relative;
+    width: 428px;
+    height: 56px;
+    border: 1px solid #bdbdbd;
+    border-radius: 7px;
+    margin-top: 5px;
+}
+
+.pagar:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 1px solid #bdbdbd;
+    border-radius: 7px;
+}
+.pagar input {
+    /*border: transparent;*/
+    height: 88%;
+    font-size: 1.3em;
+    color: black;
+    border-color: transparent;
+    font-weight: bold;
+}
+.pagar input::placeholder {
+    color: #bdbdbd;
+    font-size: 0.8em;
+}
+.pagar .max {
+    /*border: transparent;*/
+    font-size: 1em;
+    font-weight: bold;
+    height: 90%;
+    color: #1b76fc;
+    display: flex;
+    align-items: center;
+    cursor: pointer; 
+    width: 11%;
+}
+.pagar input:focus{
+    outline: none;
+    caret-color: #1b76fc;
+}
+.info{
+    width: 70%;
+}
+.currency-list-receive li:first-child:hover {
+    background-color: white;
+}
+.currency-list-pay li:first-child:hover {
+    background-color: white;
+}
+.orderType{
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.orderType label{
+    margin-right: 10px;
+}
+.informacionGris{
+    font-size: 10.5pt;
+    color: #9b9b9b;
+}
+.intercambio{
+    width: 428px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+.intercambio div{
+    width: 28px;
+    height: 28px;
+    padding: 10px;
+    /*border: 1px solid #9b9b9b;*/
+    border-radius: 50%;
+    cursor:pointer;
+}
+.intercambio div:hover{
+    color: #f7931a;
+}
+.contenedor{
+    display: inline-block;
+    width: auto;
+    max-width: 80%;
+    background-color: white;
+    padding: 3%;
+    border-radius: 20px;
+    color: black;
+}
+
+
+/* chatGPT */
+
+.select-container {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.search-container {
+    padding: 8px;
+    padding-bottom: 0;
+    padding-left: 3%;
+}
+
+.currency-list-receive {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: scroll;
+    border-top: none;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f5f5f5;
+    list-style-type: none;
+    padding: 0;
+}
+
+.currency-list-pay {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: scroll;
+    border-top: none;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f5f5f5;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.currency-list-pay > :last-child {
+    margin-left: auto;
+}
+
+/* No tocar */
+.currency-list-receive::-webkit-scrollbar {
+    width: 8px;
+}
+
+.currency-list-receive::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+    border: 2px solid #f5f5f5;
+}
+
+.currency-list-receive::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+}
+
+.currency-list-pay::-webkit-scrollbar {
+    width: 8px;
+}
+
+.currency-list-pay::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+    border: 2px solid #f5f5f5;
+}
+
+.currency-list-pay::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+}
+
+/* fin de la prohibición */
+
+
+#search-container{
+    display: none;
+}
+
+/* Cambiar los estilos a la lista para que muestre el nombre y el símbolo */
+
+
+.currency-list-receive li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.currency-list-receive li img {
+    margin-right: 10px;
+}
+
+.currency-list-pay li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.currency-list-pay li img {
+    margin-right: 10px;
+}
+
+.currency-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.currency-name {
+    font-weight: bold;
+}
+
+.currency-symbol {
+    font-size: 0.8em;
+}
+
+/* para poder escribir en el input */
+.cantidadPagar{
+    z-index:998;
+    width: 60%;
+}
+.marcado{
+    color: black;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #f7a600;
+}
+
+/* cantidadpagar 60%
+max 11%
+div 4%
+.crypto-container */
+
+.botonComprar {
+    background-color: black;
+    color: white;
+    width: 94%;
+    height: 50px;
+    border-radius: 25px;
+    /* margin-left: 4%; */
+    margin-top: 7%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.botonComprar label{
+    cursor: pointer;
+}
+
+.currency-balance{
+    font-weight: bold;
+}
+.currency-euro{
+    font-size: 0.8em;
+}
+.auxDerecha{
+    margin-left: auto;
+}
+#capa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo grisáceo */
+    z-index: 999; /* Capa por encima del resto de elementos */
+    display: none; /* Ocultar por defecto */
+  }
+  
+  #ventana {
+    width: 375px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1000; /* Capa por encima de la capa gris */
+    display: none; /* Ocultar por defecto */
+    border-radius: 8px;
+  }
+  
+  #ventana p {
+    margin: 0;
+    padding: 0 0 10px 0;
+  }
+  
+  
+  /* para indicar las monedas y los precios */
+  .contenedorMonedas {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .left-elements {
+    display: flex;
+  }
+  
+  .right-element {
+    margin-left: auto;
+  }

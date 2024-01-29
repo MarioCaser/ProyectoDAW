@@ -1,0 +1,53 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.respuesta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-bottom: 1px solid lightgrey;
+}
+.respuesta.mostrar {
+    max-height: 1000px;
+    transition: max-height 0.2s ease-in;
+}
+.panelCompleto{
+    margin-right: 2%;
+    margin-left: 2%;
+    font-size: 16px;
+}
+@media screen and (min-width: 1250px) {
+    .panelCompleto {
+        width: 1200px;
+        position: relative;
+        left: auto;
+        transform: none;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1249px) {
+    .panelCompleto {
+        width: 98%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .panelCompleto {
+        font-size: 12px;
+    }
+}
